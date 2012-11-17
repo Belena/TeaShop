@@ -1,0 +1,1360 @@
+/* css stylesheet for eZenTea.com 
+   AtlantaWebDesignGA.com 
+   
+image sizes for site
+419px by 279px - large product photo
+144px by 96px - catalogue image
+922px by 287px - home page slide show
+
+colors used in site
+#f8b86c orange (logo)
+#7e543a brown (logo)
+#b0b579 green (logo)
+#fdead3 light orange
+#e5e7d0 light green
+#b8c4c4 light blue
+#2c2d1e body background
+
+Google fonts usebd in site (loads with import below)
+font-family: 'Philosopher', sans-serif;
+*/
+@import url(http://fonts.googleapis.com/css?family=Philosopher:400,700);
+html, body {
+	height: 100%;
+	margin: 0;
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	margin:0;
+	font:14px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#7e543a;
+	background:#2c2d1e url(/images/site/tea-plantation-bg.jpg) no-repeat top center fixed;
+	min-width:990px;
+}
+img {
+	border:0;
+}
+form, fieldset {
+	margin:0;
+	padding:0;
+	border:0;
+}
+input, textarea, select {
+	font:100% "Trebuchet MS", Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+}
+input[type=text], input[type=password], input[type=file], textarea {
+	-webkit-appearance:none;
+}
+a {
+	color:#f8b86c;
+	text-decoration:none;
+	outline:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family:'Philosopher', sans-serif;
+}
+#wrapper {
+	width:990px;
+	margin:0 auto;
+	min-height:100%;
+}
+#header {
+	height:1%;
+	padding:12px 0 0;
+	position:relative;
+	z-index:1;
+}
+#header:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+.header-block {
+	overflow:hidden;
+	margin:0 0 31px;
+}
+.logo {
+	background:url(/images/site/ezentea-logo-70px.png) no-repeat;
+	margin:0;
+	float:left;
+	overflow:hidden;
+	width:177px;
+	height:90px;
+	text-indent:-9999px;
+	position:relative;
+	left:405px;
+	top:10px;
+}
+.logo a {
+	height:100%;
+	display:block;
+}
+.slogan {
+	float:left;
+	background:url(/images/site/sp.jpg) no-repeat 0 9px;
+	padding:6px 0 3px 35px;
+	margin:0 0 0 34px;
+}
+.header-block ul {
+	margin:0;
+	padding:1px 0 0;
+	list-style:none;
+	overflow:hidden;
+	float:right;
+	font:21px/24px 'Philosopher', sans-serif;
+	width:228px;
+}
+.header-block li {
+	float:left;
+	background:url(/images/site/sp.jpg) no-repeat 0 6px;
+	margin:0 1px 0 -1px;
+	padding:0 14px 0 23px;
+}
+.header-block li a {
+	float:left;
+	margin:3px 0 0;
+}
+* +html .header-block li a {
+	margin:1px 0 0;
+}
+.header-block li span {
+	float:left;
+	margin:3px 0 0;
+}
+.header-panel {
+	background:url(/images/site/navigation.png) no-repeat;
+	height:54px;
+}
+.header-panel:after, .header-panel ul:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+.header-bottom {
+	background:#B0B579 url(/images/site/gallery-bottom.png) bottom center no-repeat;
+	height:15px; /* can increase up to 54px if menu to go into this area */
+}
+.header-panel ul {
+	float:left;
+	margin:0;
+	padding:0;
+	list-style:none;
+	font:16px/18px 'Philosopher', sans-serif;
+	text-transform:uppercase;
+}
+.header-panel ul li {
+	float:left;
+	border-right:1px solid #edf0e1;
+	padding:2px 1px;
+	position:relative;
+	margin:0 1px 0 -1px;
+}
+.header-panel ul li a {
+	float:left;
+	padding:18px 24px 0;
+	height:32px;
+	color:#edf0e1;
+	margin: -2px;
+}
+* +html .header-panel ul li a, * +html .header-bottom ul li a {
+	padding:16px 24px 0;
+	height:37px;
+}
+.header-panel ul li:hover a, .header-panel ul li a:hover, .header-bottom ul li:hover a, .header-bottom ul li a:hover, .header-panel .selected {
+	background:#f8b86c;
+	text-decoration:none;
+}
+.header-panel ul li.home a, .header-bottom ul li.home a {
+	margin:-2px 0 0;
+	height:32px;
+	padding:18px 30px 0;
+}
+* +html .header-panel ul li.home a, * +html .header-bottom ul li.home a {
+	padding:16px 30px 0;
+	height:35px;
+}
+.header-panel ul li.home:hover a, .header-panel ul li.home a:hover, .header-bottom ul li.home:hover a, .header-bottom ul li.home a:hover {
+	background:#f8b86c;
+}
+.header-panel ul li:hover, .header-bottom ul li:hover {
+	position:relative;
+}
+.header-panel ul li:hover ul, .header-bottom ul li:hover ul {
+	display:block;
+}
+.header-panel ul li ul, .header-bottom ul li ul {
+	padding:0 15px 12px;
+	position:absolute;
+	top: 40px;
+	background:#f8b86c;
+	z-index:3;
+	left:-1px;
+	width:208px;
+	display:none;
+	margin:10px 0 0;
+	border-top:1px solid #fff;
+}
+.header-panel ul li ul li {
+	float:none;
+	border-right:0;
+	padding:0;
+	border-bottom:1px solid #b0b579;
+	vertical-align:top;
+	height:1%;
+}
+.header-panel ul li ul li a {
+	padding:10px 10px 9px;
+	display:block;
+	color:#7e543a;
+	text-decoration:none;
+	height:auto;
+	font-size:12px;
+	margin:0;
+	background:none !important;
+	float:none;
+}
+.header-panel ul li ul li a:hover {
+	background:#7e543a !important;
+	color:#fff;
+}
+.search-form {
+	float:right;
+	width:252px;
+	height:25px;
+	background:url(/images/site/search.png) no-repeat;
+	margin:11px 33px 0 0;
+	position:relative;
+	padding:9px 0 0;
+}
+.search-box {
+	overflow:hidden;
+	padding:0;
+}
+.search-form .submit {
+	float:left;
+	width:16px;
+	height:14px;
+	background:url(/images/site/bSearch.png) no-repeat;
+	border:none;
+	text-indent:-9999px;
+	line-height:0;
+	padding:0;
+	margin:2px 0 0 15px;
+	cursor:pointer;
+}
+.search-form .text {
+	float:right;
+	background:none;
+	border:0;
+	width: 195px;
+	font-size:12px;
+	color:#7e543a;
+	outline:none;
+	padding:0;
+	margin:0 15px 0 0;
+}
+/* middle-menu on bottom of header */
+#midde-menu-wrap, #middle-menu {
+	background-color:#ffffff;
+	width:100%;
+	clear:both;
+	position:relative;
+	height:64px;
+	vertical-align:middle;
+}
+.middle-menu-img {
+	padding:5px 10px 5px 0;
+	vertical-align:middle;
+}
+.middle-menu-label {
+ 	padding: 20px 0px; 
+	vertical-align:middle;
+}
+#middle-menu-wrap ul li a {
+	float:left;
+	height:54px;
+	padding:5px 24px 0;
+	color:#f8b86c;
+}
+#middle-menu-wrap ul {
+	float:left;
+	margin:0;
+	padding:0;
+	list-style:none;
+	font:16px/18px 'Philosopher', sans-serif;
+	text-transform:uppercase;
+}
+#middle-menu-wrap ul li {
+	float:left;
+/*	border-right:1px solid #edf0e1; */
+	padding:2px 1px;
+	margin:0 1px 0 -1px;
+	height:54px;
+	position:relative;
+	vertical-align:middle;
+}
+/* main */
+#main {
+	overflow:hidden;
+	padding:0 0 100px;
+}
+.main-frame {
+	background:#fff;
+	border:1px solid #edf0e1;
+	border-top:0px;
+	padding:22px 32px 43px;
+	overflow:hidden;
+}
+.gallery {
+	position:relative;
+	overflow:hidden;
+	width:930px;
+	background:#B0B579;
+	padding:0 30px;
+	height:287px;
+	z-index:0;
+	display:none;
+}
+.gallery-holder {
+	position:relative;
+	overflow:hidden;
+	width:922px;
+	height:287px;
+}
+.main-holder {
+	overflow:hidden;
+	height:1%;
+}
+#sidebar {
+	float:left;
+	width:230px;
+	padding:8px 0 0;
+}
+.sidebar-box {
+	border:none;
+	overflow:hidden;
+	padding:0 0 5px;
+	margin:0 0 32px;
+	background:#e5e7d0;
+}
+.sidebar-box h2 {
+	background:#e5e7d0 url(/images/site/sidebar-box-top.jpg) no-repeat top left;
+	padding:20px 0 6px 27px;
+	font:19px/22px 'Philosopher', sans-serif;
+	color:#7e543a;
+	margin:0 0 4px;
+	text-transform:uppercase;
+}
+.sidebar-box h2 a {
+	color:#f8b86c;
+}
+.sidebar-box h3 {
+	color: #555555;
+	font: bold 18px/18px 'Philosopher', sans-serif;
+	margin-bottom: 10px;
+	padding-left: 20px;
+}
+.sidebar-box ul {
+	margin:0;
+	padding:0 12px 20px 20px;
+	list-style:none;
+	overflow:hidden;
+}
+.sidebar-box ul li {
+	padding:1px 0;
+	/*	border-top:1px solid #b0b579; */
+	margin:-1px 0 1px;
+	font-size:14px;
+}
+.sidebar-box ul li a {
+	padding:4px 8px;
+	display:block;
+	color:#7e543a;
+	text-decoration:none;
+}
+.sidebar-box ul li a:hover, .sidebar-box ul li.active a, .catalog-list a h3:hover {
+	color:#ffffff;
+	background:#f8b86c;
+}
+ul.catalogueitemdump {
+	list-style:url(/images/site/orange_arrow-16px.png) outside;
+	padding:0 12px 20px 45px;
+}
+.sidebar-box ol {
+	margin:0;
+	padding:0 0 20px 29px;
+	color:#7e543a;
+	counter-reset:section;
+	list-style:none;
+}
+.announcement-list {
+	font:14px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding:10px 13px;
+}
+.announcement-list h3 {
+	margin:0 0 10px;
+	font:bold 16px/19px 'Philosopher', sans-serif;
+}
+.announcement-list h3 .date {
+	display:block;
+	margin:0;
+}
+.announcement-list p {
+	margin:0;
+}
+.sidebar-box ol li:before, .sidebar-box ol li .list-item-before {
+	content:''counter(section)'.';
+	counter-increment:section;
+	margin:0 0 -16px -20px;
+	position:relative;
+	display:block;
+	width:27px;
+}
+/* .sidebar-box ol li {
+ list-style-type:expression(  function(t) {
+ t.runtimeStyle.listStyleType = 'none';
+ t.insertAdjacentHTML('afterBegin', '<span class="list-item-before">' + (++t.parentNode.IEcounter || (t.parentNode.IEcounter = 1)) + '. </span>');
+}
+(this)  );
+} */
+.sidebar-box ol li {
+	margin:17px 0 0;
+}
+.sidebar-box ol li a {
+	color:#1aade4;
+}
+#icons {
+	overflow:hidden;
+	padding:0 0 0 32px;
+}
+#icons img {
+	float:left;
+	margin:0 3px 0 0;
+}
+#content {
+	float:right;
+	width:664px;
+	overflow:hidden;
+}
+.content-article {
+}
+#content h2, .content-article h2 {
+	background: url("/images/site/teacup-48px.jpg") no-repeat scroll 0 6px transparent;
+	font: 24px/28px 'Philosopher', sans-serif;
+	margin: 0 0 26px;
+	min-height: 48px;
+	padding: 23px 0 0 50px;
+	text-transform: uppercase;
+	clear:right;
+}
+#main h1 {
+	background: url("/images/site/teacup-48px.jpg") no-repeat scroll 0 6px transparent;
+	margin: 0 0 26px;
+	min-height: 48px;
+	padding: 30px 0 0 50px;
+	text-transform: uppercase;
+	clear:right;
+}
+
+.system-message h1, .system-error-message h1, .user-info h2, .shop-checkout h1, .announcement-details h1 {
+	font:24px/28px 'Philosopher', sans-serif;
+	margin:0 0 26px;
+	text-transform:uppercase;
+	color:#7e543a;
+}
+.products, .productfeaturelist, .productSmall {
+	overflow:hidden;
+	margin:0;
+	padding:6px 0 0;
+	list-style:none;
+	width:990px;
+}
+.shop-main ul.productSmall {
+	margin:0 0 30px;
+}
+#content .products, #content .productfeaturelist {
+	width:710px;
+	padding:0 0 1px 3px;
+	border-bottom:1px solid #b0b579;
+}
+.products li, .productSmall li {
+	float:left;
+	width:270px;
+	padding:0 58px 30px 0
+}
+#content .products li {
+	width:308px;
+	padding:0 43px 30px 0;
+}
+.shop-product-large .image .productPopletsItem img {
+	margin:0 10px;
+}
+.products li img, .productfeaturelist li img, .shop-product-large .image img, .productSmall td img, .productSmall li img {
+	display:block;
+	/*	border:1px solid #b0b579 !important; */
+	margin:0 auto 10px;
+}
+.shop-product-small {
+	min-height:306px; 
+	border:none;
+	position:relative;
+}
+.small-product-info {
+	position:absolute;
+	bottom:0;
+	min-height:48px;
+}
+.shop-product-small .description {
+	display:none;
+}
+.shop-product-small .product-image { height:279px; overflow:hidden; }
+.shop-product-small .price, .shop-product-small .quantity, .shop-product-small .product-grouping {
+	color:#b0b579;
+	font:18px/18px 'Philosopher', sans-serif;
+	text-align:left;
+	margin:0 12px 29px 0;
+	float:left;
+	padding-top:17px;
+}
+.shop-product-small .product-grouping select {
+	color:#b0b579;
+	font:18px/18px 'Philosopher', sans-serif;
+}
+.shop-product-small .quantity input {
+	width:20px;
+	text-align:center;
+	padding:2px;
+	color:#b0b579;
+	font:18px/18px 'Philosopher', sans-serif;
+}
+.shop-product-small .add-to-cart {
+	float:right;
+	width:48px;
+}
+.shop-product-small .price {
+	padding-top:20px;
+}
+/* shop product small backup layout for featured products on home page */
+.productfeaturelist li {
+	float:left;
+	width:208px;
+	padding:0 20px 30px 0
+}
+.shop-product-small-backup {
+	min-height:255px; 
+	border:none;
+	position:relative;
+}
+.small-product-info {
+	position:absolute;
+	bottom:0;
+	min-height:48px;
+}
+.shop-product-small-backup .description {
+	display:none;
+}
+.shop-product-small-backup .price, .shop-product-small-backup .quantity, .shop-product-small-backup .product-grouping {
+	color:#b0b579;
+	font:14px/14px 'Philosopher', sans-serif;
+	text-align:left;
+	margin:0 10px 29px 0;
+	float:left;
+	padding-top:9px;
+}
+.shop-product-small-backup .product-grouping select {
+	color:#b0b579;
+	font:14px/14px 'Philosopher', sans-serif;
+}
+.shop-product-small-backup .quantity input {
+	width:20px;
+	text-align:center;
+	padding:2px;
+	color:#b0b579;
+	font:18px/18px 'Philosopher', sans-serif;
+	display:none;
+}
+.shop-product-small-backup .add-to-cart {
+	float:right;
+	width:32px;
+}
+.shop-product-small-backup .price {
+	padding-top:12px;
+}
+.productfeaturelist h3 {
+	font:18px/18px 'Philosopher', sans-serif;
+	float:left;
+	margin:0;
+	overflow:hidden;
+	position:absolute;
+	top:156px;
+}
+.productfeaturelist h3 a {
+	color:#f8b86c;
+}
+.productfeaturelist h3 a:hover {
+	text-decoration:underline;
+}
+/* products */
+.products h3, .productSmall h3 {
+	margin:0;
+	overflow:hidden;
+	position:absolute;
+	top:200px;
+}
+.products h3 {
+	font:20px/22px 'Philosopher', sans-serif;
+	float:left;
+} /* cufon */
+.products h3 a, .productfeaturelist h3 a, .productSmall h3 a {
+	color:#f8b86c;
+}
+.products h3 a:hover, .productfeaturelist h3 a:hover, .productSmall h3 a:hover {
+	text-decoration:underline;
+}
+/* .products span.price,
+.productfeaturelist span.price,
+.productSmall .price{
+	color:#b0b579;
+	font:12px/15px 'Philosopher', sans-serif;
+} */
+
+.shop-receipt, .shop-quote-receipt {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 20px;
+}
+
+.paging {
+	overflow:hidden;
+	font-size:12px;
+	border-top:1px solid #b0b579;
+	padding:32px 0 0;
+}
+.shop-main .footer {
+	float:right;
+}
+.previous-holder {
+	float:left;
+}
+.next-holder {
+	float:right;
+}
+.pagination-holder {
+	float:left;
+	padding:8px 10px 0 0;
+}
+.pagination-holder a {
+	padding:0 8px;
+	color:#f8b86c;
+	text-decoration:underline;
+}
+.pagination-holder a:hover {
+	text-decoration:none;
+}
+.paging ul li.prev a, .paging ul li.next a {
+	float:left;
+	text-indent:-9999px;
+	overflow:hidden;
+	width:29px;
+	height:27px;
+	background:url(/images/site/gpPrev.jpg) no-repeat;
+	margin:-7px -7px 0 0;
+}
+.paging ul li.next a {
+	background:url(/images/site/gpNext.jpg) no-repeat;
+	margin:-7px -16px 0 11px;
+}
+.paging ul li span {
+	letter-spacing:2px;
+	float:left;
+	margin:0 0 0 -4px;
+}
+.paging ul li a:hover, .paging ul li.active a {
+	text-decoration:underline;
+}
+#footer {
+	width:990px;
+	margin:-80px auto 0;
+	height:80px;
+}
+.footer-box {
+	float:left;
+	width:500px;
+	font:13px/15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#7e543a;
+}
+.footer-box a {
+	color:#7e543a;
+}
+/* top menus */
+div.top-left-menu { float:left; width:400px; }
+
+.add-nav {
+	overflow:hidden;
+}
+#footer ul, .add-nav ul, div.top-left-menu ul {
+	float:right;
+	overflow:hidden;
+	margin:0 -11px 0 0;
+	padding:0;
+	list-style:none;
+	font:14px/14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+div.top-left-menu ul { float:left; }
+.add-nav ul {
+	margin:0;
+}
+#footer li, .add-nav li, .add-nav span, div.top-left-menu li {
+	float:left;
+	background:url(/images/site/sp2.jpg) no-repeat 0 4px;
+	margin:0 1px 0 -1px;
+	padding:0 10px 0 15px;
+}
+.add-nav span {
+	float:right;
+	font:14px/14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#footer li a, .add-nav li a, .add-nav span a, .add-nav, div.top-left-menu li a {
+	color:#e5e7d0;
+}
+.header-block .cartSummaryItem {
+	color:#f8b86c;
+	font:14px/14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:900;
+}
+.cartSummaryLink, .cart-link {
+	float:right;
+	text-indent:-9999px;
+	overflow:hidden;
+	background:url(/images/site/shopping-cart.png) no-repeat 0 -10px;
+	width:48px;
+	height:48px;
+	margin:8px 0 0 14px;
+}
+.shop-main .cartSummaryItem {
+	color:#7e543a;
+}
+.shop-main .header {
+	border:none;
+	height:48px;
+}
+.main-panel {
+	background:#ffffff url(/images/site/titleExt.jpg) repeat-x;
+	border:1px solid #e6e6e6;
+	padding:10px 15px 6px;
+	overflow:hidden;
+	margin:0 0 26px;
+}
+.main-panel .breadcrumbs {
+	float:left;
+	margin:0;
+	list-style:none;
+	color:#7e543a;
+	text-transform:uppercase;
+	font:15px/18px 'Philosopher', sans-serif;
+}
+.main-panel .breadcrumbs span {
+	float:left;
+	margin:0 11px 0 0;
+}
+.main-panel .breadcrumbs a {
+	background:url(/images/site/orange_arrow-16px.png) no-repeat 0 50%;
+	padding:0 0 0 20px;
+	color:#7e543a;
+	margin:0 8px 0 0;
+/*	float:left; */
+}
+.header-panel ul li a {
+	float:left;
+} /* cufon */
+.header-panel ul li a {
+	line-height:24px;
+} /* cufon */
+.main-panel .breadcrumbs a:hover {
+	text-decoration:none;
+}
+.container {
+	overflow:hidden;
+}
+.email-form {
+	float:left;
+	width:422px;
+	margin:2px 0 0;
+}
+.email-form td {
+	padding:0 !important;
+}
+.email-form .text, .login-form .cat_textbox, .secure-login .cat_textbox_small, .system-error-message .textbox, .registration .cat_textbox, .edit .cat_textbox, .comment-list .cat_textbox_small, .comment-form .cat_textbox_small, .shop-checkout .cat_textbox {
+	display:block;
+	background:#fff;
+	border:1px solid #b0b579;
+	padding:11px 10px;
+	margin:0 0 16px;
+	outline:none;
+	width:400px;
+	color:#7e543a;
+	font:12px/15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.edit .cat_textbox, .shop-checkout .cat_textbox {
+	display:inline;
+}
+.registration .cat_textbox, .edit .cat_textbox {
+	margin:0;
+}
+.email-form textarea, .comment-list textarea, .comment-form textarea, .shop-checkout textarea {
+	display:block;
+	background:#fff;
+	border:1px solid #b0b579;
+	padding:12px 10px;
+	margin:0 0 16px;
+	outline:none;
+	height:174px;
+	max-height:174px;
+	max-width:400px;
+	width:400px;
+	color:#7e543a;
+	font:12px/15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	overflow:auto;
+}
+/* buttons */
+.email-form .submit, .login-form .cat_button, .secure-login .cat_button, .system-error-message .button, .registration .cat_button, .edit .cat_button, .comment-list .submit, .comment-form .cat_button, .shop-checkout .cat_button, .user-info .edit-details {
+	display:block;
+	background:#b0b579;
+	border:none;
+	color:#fff;
+	font:12px/15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding:0;
+	margin:0;
+	cursor:pointer;
+	width:194px;
+	height:41px;
+	text-transform:uppercase;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.user-info .edit-details {
+	text-align:center;
+	padding:14px 0 0;
+	height:27px;
+	margin:10px 0 0;
+}
+.user-info .edit-details:hover {
+	text-decoration:none;
+}
+.login-form label, .secure-login label, .system-error-message label, .registration label, .edit label, .comment-list label, .comment-form label, .shop-checkout label {
+	font:14px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin:0 0 7px 10px;
+	display:block;
+}
+.shop-checkout select {
+	margin:0 0 16px;
+}
+.comment-list .has-captcha label {
+	margin:0 0 7px;
+}
+.comment-list .has-captcha .cat_textbox {
+	display:block;
+	background:#fff;
+	border:1px solid #b0b579;
+	padding:11px 10px;
+	margin:0;
+	outline:none;
+	width:138px !important;
+	color:#7e543a;
+	font:12px/15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.system-error-message {
+	width:670px;
+	margin:0 auto;
+	padding:0;
+	background:none;
+	border:none;
+}
+.container-info {
+	float:right;
+	width:471px;
+	line-height:22px;
+}
+.container-info h2 {
+	margin:0 0 17px;
+	font:30px/34px 'Philosopher', sans-serif;
+	color:#7e543a;
+}
+.container-info p {
+	margin:0 0 20px;
+}
+.cartSummaryTable {
+	margin:13px 0 0;
+}
+.edit table {
+	margin:0 0 40px;
+}
+.hidden {
+	display:none;
+}
+.user-info dl {
+	margin:0;
+	overflow:hidden;
+}
+.user-info dt {
+	float:left;
+	margin:0 5px 5px 0;
+	width:85px;
+}
+.user-info dd {
+	margin:0 0 5px;
+}
+.user-info h2 {
+	margin:15px 0 10px 15px;
+}
+.order-list {
+	margin:10px 0;
+}
+.order-list td {
+	padding:6px;
+}
+.registration h2, .edit h2, .comment-form h5 {
+	color: #7e543a;
+	font: 23px/28px 'Philosopher', sans-serif;
+	margin: 0 0 16px;
+}
+.edit h2 {
+	margin:0 0 6px 10px;
+}
+.registration table {
+	margin:0 0 10px;
+}
+.captcha-holder strong, .registration .captchaimg img, .edit strong {
+	display:block;
+}
+.registration .captchaimg, .comment-list .captchaimg, .comment-form .captchaimg {
+	margin:0 0 10px;
+}
+.captcha-holder .cat_textbox {
+	width:140px !important;
+	padding:5px 10px;
+}
+.blog-list {
+	background:none;
+	border:none;
+	font:14px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.blog-post .post-body {
+    margin: 36px 0;
+}
+
+.blog-post h2, .post-list h2 {
+	color: #7e543a;
+	font: 29px/33px 'Philosopher', sans-serif !important;
+	margin: 20px 0 5px !important;
+	border:none !important;
+	padding:0 !important;
+	text-transform:uppercase;
+}
+.post-list #catforumoutput h2 {
+	font: 20px/23px 'Philosopher', sans-serif !important;
+	text-indent:15px;
+}
+.breadcrumb {
+	display:none;
+}
+.blog-post h2 a:hover, .post-list h2 a:hover {
+	text-decoration:none;
+}
+.blog-container .description {
+	display:none;
+}
+.post-details, .post-body p {
+	margin:0 0 5px !important;
+}
+.comment-list {
+	background:none;
+	border:none;
+	padding:0;
+}
+.comment-list h5 {
+	color: #7e543a;
+	font: 25px/27px "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+	margin: 0 !important;
+}
+.comments-form {
+	margin:25px 0 0;
+}
+.comments-form .item, .comment-form .item, .shop-checkout .item, .secure-login .item {
+	padding:0 0 10px !important;
+}
+.secure-login div.form {
+	padding:0;
+}
+.secure-login .checkbox {
+	float:left;
+	margin:0;
+	padding:0;
+	width:16px;
+	height:15px;
+}
+.BlogRecentPost li, .BlogTagList li, .BlogPostArchive li {
+	font:14px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.side-panel h4 {
+	margin:0 0 10px;
+	font:bold 14px/18px 'Philosopher', sans-serif;
+}
+.account-container {
+	overflow:hidden;
+}
+.account-container h2 {
+	color: #7e543a;
+	font: 27px/30px 'Philosopher', sans-serif !important;
+	margin: 0 0 20px;
+}
+.account-container .holder {
+	overflow:hidden;
+}
+.account-container h3 {
+	margin:0 0 16px;
+	font:bold 16px/19px 'Philosopher', sans-serif;
+	background:none;
+	border:none;
+	padding:0;
+	text-transform:uppercase;
+}
+.account-container p {
+	margin:0 0 16px 10px;
+}
+.account-container .column {
+	float:left;
+	width:450px
+}
+.create-account {
+	display:block;
+	background:#7e543a;
+	border:1px solid #b0b579;
+	color:#fff;
+	font:11px/15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	width:194px;
+	height:28px;
+	text-transform:uppercase;
+	text-align:center;
+	padding:13px 0 0;
+}
+.create-account:hover {
+	text-decoration:none;
+}
+.login-form, .secure-login {
+	width:428px;
+	float:right;
+	border:none;
+	background:none;
+	margin:0;
+}
+.view-display {
+	float:right;
+	font:11px/13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding:3px 4px 0 0;
+}
+.view-display a {
+	text-decoration:underline;
+}
+.view-display a:hover {
+	text-decoration:none;
+}
+/* .catalogueTable,
+.shop-main .header,
+.shop-cart .breadcrumbs,
+.shop-cart h1{display:none;} */
+.productItemNotFound {
+	display:none;
+}
+/* catalog pages */
+.shop-catalogue {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: none;
+	float: left;
+	height: 126px;
+	margin: 0 0 20px 0;
+	overflow: hidden;
+	width: 144px;
+}
+.shop-catalogue h4 a {
+	color:#f8b86c;
+	font:20px/22px 'Philosopher', sans-serif;
+	text-decoration:none;
+	text-align:center;
+	float:left;
+	width:144px;
+	z-index:10;
+}
+/* product large */
+.shop-product-large {
+	overflow:hidden;
+	border:none;
+}
+.shop-product-large .image {
+	margin:0;
+	float:left;
+	padding:0;
+	width:420px;
+}
+.shop-product-large .details {
+	float:right;
+	padding:0;
+	background:none;
+	width:472px;
+	margin:-6px 0 0;
+	line-height:22px;
+}
+.shop-product-large .price, .shop-product-large .quantity, .shop-product-large .product-grouping {
+	color:#b0b579;
+	font:24px/30px 'Philosopher', sans-serif;
+	text-align:right;
+	margin:0 20px 29px 0;
+	float:left;
+}
+.shop-product-large .quantity input {
+	color:#b0b579 !important;
+	width: 40px;
+	text-align:center;
+}
+.shop-product-large .product-grouping select {
+	color:#b0b579 !important;
+	width: auto;
+	text-align:center;
+}
+.shop-product-large .description {
+	border-bottom:1px solid #b0b579;
+	margin:0 0 27px;
+	padding:0 0 8px;
+}
+.shop-product-large h1, .forum-container h1, .forum-posts-container h1, .blog-container h1 {
+	color:#7e543a;
+	font:29px/33px 'Philosopher', sans-serif;
+	margin:0 0 16px;
+}
+.blog-container h1 img {
+	margin:0 0 0 10px;
+}
+.shop-product-large .details p {
+	margin:0 0 19px;
+}
+.shop-product-large .details .add-to-cart img {
+	top:0;
+	float:right;
+	margin:-2px 0 0 10px;
+	cursor:pointer;
+}
+.shop-product-large .product-code { clear:both; }
+.radio-holder {
+	overflow:hidden;
+	padding:0 0 10px 10px;
+}
+.poplets {
+	border-top:none;
+	margin: 0;
+	padding: 13px 0 0;
+}
+.sitemap ul {
+	margin:0;
+	padding:0 0 0 20px;
+	list-style:none;
+	font:14px/17px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.sitemap li {
+	padding:4px 0 7px 20px;
+	background:url(/images/site/tBox.jpg) no-repeat 0 8px;
+}
+.sitemap li ul {
+	padding:7px 0 0 20px;
+}
+table.topic-list th {
+	font:14px/17px "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+}
+.shop-cart .cart {
+	border:none;
+	font:15px/17px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.remove-link a {
+	display:block;
+	text-indent:-9999px;
+	overflow:hidden;
+	width:32px;
+	height:32px;
+	background:url(/images/site/remove_from_shopping_cart-32.png) no-repeat;
+	margin:25px auto 0;
+}
+.shop-cart table.cart th {
+	background:none;
+	color:#7e543a;
+	font:18px/23px 'Philosopher', sans-serif;
+	text-transform:uppercase;
+	text-align:left;
+	padding:25px 24px;
+	border:none;
+}
+.shop-cart table.cart .val td {
+	padding:0;
+	background:#e5e7d0;
+	border:none;
+}
+.shop-cart table.cart td.productname a {
+	color:#7e543a;
+}
+.shop-cart table.cart .val td.quantity input {
+	display:block;
+	background:#f8b86c;
+	color:#ffffff;
+	padding:3px 0;
+	margin-top:18px;
+	border:none;
+	width:124px;
+	text-align:center;
+}
+/* checkout form */
+.call-my { margin-bottom:15px; }
+.call-my label, call-my input { display:inline; }
+.call-my input { margin: 0 }
+.call-my label { margin: 0 15px 0 0; }
+/* buttons */
+.buttons-holder {
+	overflow:hidden;
+}
+.buttons-holder a {
+	float:left;
+	text-indent:-9999px;
+	overflow:hidden;
+	width:62px;
+	height:20px;
+	background:url(/images/site/ico-minus.gif) no-repeat;
+}
+.buttons-holder a.plus {
+	background:url(/images/site/ico-plus.gif) no-repeat;
+}
+table.cart strong {
+	font:19px/21px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.envelope {
+	margin:0 0 20px;
+}
+table.cart .invoice-total {
+	vertical-align:middle;
+	text-align:center;
+}
+table.cart .invoice-total .envelope {
+	border:1px solid #ebebeb;
+	height: 55px;
+	padding: 26px 10px 0;
+	width: 268px;
+}
+table.cart .invoice-total strong {
+	color:#b0b579;
+	font:34px/37px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+input#DiscountCode, input#GiftVoucher { width: 170px; }
+.shippingDiv, .shippingStateDiv { margin-top:15px; }
+select.shippingDropDown { width: 250px; }
+tr.shipping td {
+	border:none;
+}
+tr.total td {
+	border-bottom:1px solid #DDD;
+}
+table.cart td.total-section {
+	vertical-align:middle;
+}
+table.cart td.actions {
+	vertical-align:top;
+}
+table.cart .actions a {
+	color:#7e543a;
+	font:14px/17px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	float:right;
+}
+table.cart .actions a.continue-shopping {
+	margin:15px 18px 0 0;
+}
+table.cart .actions a.continue-shopping:hover {
+	color:#999;
+}
+table.forum td, table.topic {
+	font:14px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+table.forum h3 {
+	margin:0;
+	font:bold 14px/17px 'Philosopher', sans-serif;
+}
+.productitemcell {
+	height:70px;
+	padding:27px 23px;
+	border-bottom:1px solid #fff;
+}
+.cart-image .productitemcell {
+	width:121px;
+	height:67px;
+	padding:28px 23px 29px;
+}
+.productitemcell img {
+	display:block;
+	border:1px solid #ebebeb;
+	width:100%;
+}
+.productname .productitemcell {
+    padding: 47px 10px 7px;
+    width: 330px;
+}
+.shop-cart table.cart th.productname {
+	padding:25px 0;
+}
+.shop-cart table.cart td.quantity { text-align:left; }
+tr.discount td.quantity, tr.shipping td.quantity { text-align:left; }
+
+.price-section .productitemcell {
+	padding:47px 0 7px 23px;
+	color:#7e543a;
+	width:60px;
+}
+/* .product-image {
+	width:268px;
+	height:201px;
+} */
+/* .product-image img{width:100%;} deleted for featured home page images */
+#content .product-image {
+	width:auto;b
+	height:auto;
+}
+.hidden {
+	display:none;
+}
+/* messageBox for popup alerts */
+div#messageBox {
+	position: fixed;
+	top: 50%;
+	right: 50%;
+	font-size: 18px;
+	background-color:#f8b86c;
+	color: #7e543a;
+	padding: 20px;
+	display: none;
+}
+/* buttons */
+.button { 
+    font-size:11px;
+	background-color:#b0b579;
+	color:#fff;
+	padding:5px 10px;
+	cursor:pointer;
+	vertical-align:middle;
+	text-transform:uppercase;
+	background-image:none;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+/* menu */
+.menu-table td { border-top: 1px dotted #b0b579; text-align:left; vertical-align:top; color:#7e543a;}
+.menu-table h2 { color:#333333; }
